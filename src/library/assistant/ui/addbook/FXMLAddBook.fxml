@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="350.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.assistant.ui.addbook.FXMLAddBookController">
+    <stylesheets>
+        <URL value="@fxmladdbook.css" />
+      <URL value="@../../resources/commonButton.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="345.0" prefWidth="342.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <Label fx:id="labelLogin" alignment="CENTER" prefHeight="70.0" prefWidth="400.0" style="-fx-background-color: black;" text="Library Assistant Login" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="tfTitle" labelFloat="true" promptText="Book Title">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="tfId" labelFloat="true" promptText="Book Id">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="tfAuthor" labelFloat="true" promptText="Book Author">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="tfPublisher" labelFloat="true" promptText="Publisher">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="342.0">
+               <children>
+                  <JFXButton fx:id="bSave" onAction="#addBook" prefHeight="35.0" prefWidth="100.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SAVE" size="20" style="-fx-fill: white;" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="bCancel" onAction="#cancel" prefHeight="35.0" prefWidth="100.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="TIMES" size="20" style="-fx-fill: white;" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
